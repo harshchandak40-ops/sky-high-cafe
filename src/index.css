@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-orange: #ff6b00;
+  --color-brand-gold: #d4af37;
+  --color-brand-black: #0a0a0a;
+  --color-brand-dark: #121212;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-white font-sans antialiased;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-orange to-brand-gold;
+}
+
+.btn-primary {
+  @apply bg-brand-orange hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-brand-orange/20;
+}
+
+.btn-secondary {
+  @apply border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105 active:scale-95;
+}
+
+.section-padding {
+  @apply py-16 px-6 md:px-12 lg:px-24;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

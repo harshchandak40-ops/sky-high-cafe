@@ -1,0 +1,5 @@
+{
+  "name": "The Sky High Cafe",
+  "description": "Premium family restaurant in Baran, Rajasthan offering a cozy ambience and delicious multicuisine food.",
+  "requestFramePermissions": ["geolocation"]
+}
